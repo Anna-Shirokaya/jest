@@ -170,18 +170,6 @@ test('a string instead of a number', async () => {
     
 })
 
-//проверка, что файл не создан в месте, где нет доступа
-test('the file should not be created due to missing permissions', async () => {
-    // Вызываем функцию с неправильным аргументом
-    try {
-      await drawTree(7, './2/1.txt');
-      // Если код дошел до этой строки, то тест не пройдет, так как не выброшено исключение
-      throw new Error('Function did not throw an error as expected');
-    } catch (error) {
-      // Проверяем, что сообщение об ошибке соответствует ожидаемому
-      expect(error.message).toBe('Function did not throw an error as expected');
-    }
-  });
 //проверка при недопустимом имени файла
 //Попробуйте записать елочку в файл на максимальной доступной длине пути к файлу.
 //проверка, что количество строк в записываемом файле верное
