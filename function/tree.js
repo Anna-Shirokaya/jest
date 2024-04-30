@@ -11,12 +11,7 @@ async function drawTree(height, filename) {
     if (!Number.isInteger(height) || height <= 1 || /[#$%!@^&*()]/.test(height) ) {
         throw new Error('Параметр height должен быть положительным целым числом');
     }  
-    //проверка доступа к файлу
-    fs.access('./2', fs.constants.R_OK | fs.constants.W_OK, (err) => {
-        if (err) {
-          throw new Error('Доступ к папке запрещен');
-        } 
-    });
+    
     
 
     function createWriteStream() {
