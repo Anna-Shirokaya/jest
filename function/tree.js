@@ -80,7 +80,7 @@ createWriteStream()
 }
 
 //try {
-drawTree(2,'13.txt');
+//drawTree(2,'13.txt');
 //} catch (error) {
 //    console.error(error.message);
 //};
